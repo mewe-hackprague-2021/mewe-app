@@ -10,3 +10,5 @@ services:
       - ./webapp/public:/app/public
       - ./webapp/package.json:/app/package.json
       - ./webapp/package-lock.json:/app/package-lock.json
+  flats:
+    build: flats/
