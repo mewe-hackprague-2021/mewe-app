@@ -10,5 +10,9 @@ services:
       - ./webapp/public:/app/public
       - ./webapp/package.json:/app/package.json
       - ./webapp/package-lock.json:/app/package-lock.json
-  flats:
-    build: flats/
+  api:
+    build: api/
+    ports:
+      - "8080:80"
+    volumes:
+      - ./api/app:/code/app
