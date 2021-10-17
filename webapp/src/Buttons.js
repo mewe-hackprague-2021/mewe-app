@@ -1,5 +1,10 @@
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Slider from '@mui/material/Slider';
+
+const FancySlider = styled(Slider)(({ theme }) => ({
+  color: '#A20092'
+}));
 
 const FancyButton = styled(Button)(({ theme }) => ({
     color: '#FFFFFF',
@@ -23,4 +28,4 @@ const FancySecondaryButton = styled(Button)(({ theme }) => ({
     },
 }));
 
-export { FancyButton, FancySecondaryButton };
+export { FancyButton, FancySecondaryButton, FancySlider };
