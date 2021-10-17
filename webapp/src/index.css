@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1.MuiTypography-h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.connector-arrows { margin-inline: 1.25rem; }
+svg.connector-arrows-icon { width: 44px; height: 44px; margin-left: -4px; }
+
+.secondary-link { font-weight: 700; color: #5B5147; }

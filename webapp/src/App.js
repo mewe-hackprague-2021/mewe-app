@@ -1,29 +1,39 @@
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ConnectBankPage from './pages/ConnectBankPage';
+import ConnectSocialPage from './pages/ConnectSocialPage';
+import ConnectPrefsPage from './pages/ConnectPrefs';
+import SplashPage from './pages/SplashPage';
+import SignInPage from './pages/SignInPage';
+import connectorArrows from './connector-arrows.svg';
 import logo from './logo.svg';
-import './App.css';
-import Button from '@mui/material/Button';
+import logoFullbg from './logo-fullbg.svg';
+import logoSymbol from './logo-symbol.svg';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
-      </header>
-    </div>
+    <Router>
+      <div className='vh-100 d-flex flex-column'>
+      <Switch>
+        <Route path='/connect-prefs/'>
+          <ConnectPrefsPage connectorArrows={connectorArrows} logoFullbg={logoFullbg} />
+        </Route>
+        <Route path='/connect-social/'>
+          <ConnectSocialPage connectorArrows={connectorArrows} logoFullbg={logoFullbg} />
+        </Route>
+        <Route path='/connect-bank/'>
+          <ConnectBankPage connectorArrows={connectorArrows} logoFullbg={logoFullbg} />
+        </Route>
+        <Route path='/sign-in/'>
+          <SignInPage logoSymbol={logoSymbol} />
+        </Route>
+        <Route>
+          <SplashPage logo={logo} />
+        </Route>
+      </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
