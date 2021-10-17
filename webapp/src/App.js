@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ChatPage from './pages/ChatPage';
 import ConnectBankPage from './pages/ConnectBankPage';
 import ConnectSocialPage from './pages/ConnectSocialPage';
 import ConnectPrefsPage from './pages/ConnectPrefs';
@@ -15,6 +16,9 @@ const App = () => {
     <Router>
       <div className='vh-100 d-flex flex-column'>
       <Switch>
+        <Route path='/chat/'>
+          <ChatPage logo={logo} />
+        </Route>
         <Route path='/connect-prefs/'>
           <ConnectPrefsPage connectorArrows={connectorArrows} logoFullbg={logoFullbg} />
         </Route>

@@ -14,11 +14,6 @@ import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
 
 function ConnectPrefsPage({ logoFullbg, connectorArrows }) {
-  const history = useHistory();
-  const handleClick = (e) => {
-    history.push("/connect-prefs");
-  }
-
   const [country, setCountry] = React.useState('');
   const handleCountryChange = (event) => {
     setCountry(event.target.value);
@@ -43,6 +38,15 @@ function ConnectPrefsPage({ logoFullbg, connectorArrows }) {
   const handleSizeChange = (event) => {
     setSize(event.target.value);
   };
+
+  const history = useHistory();
+  const handleClick = (e) => {
+    const detailsLinkTo = {
+      pathname: '/chat/',
+      city: city,
+    }
+    history.push(detailsLinkTo);
+  }
 
   const identity = (arg) => arg;
 
