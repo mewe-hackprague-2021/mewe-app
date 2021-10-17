@@ -12,6 +12,8 @@ App screenshots:
   <img src="readme/screenshot-6.png" align="center" alt="Screenshot 6" width="108" /> &nbsp;
 </p>
 
+Figma prototype (v2): https://www.figma.com/proto/dUYJ9vuVABUupIZe1CCBVK/App
+
 ## Architecture
 
 Stack built on `docker-compose` exposes two machines:
