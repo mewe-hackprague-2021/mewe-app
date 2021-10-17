@@ -11,6 +11,9 @@ function SignInPage({ logoSymbol }) {
   const handleClick = (e) => {
     history.push("/connect-bank");
   }
+  const handleSkip = (e) => {
+    history.push("/home");
+  }
 
   return <>
       <div className="page-signin vw-100 vh-100 d-flex flex-column p-4 align-items-stretch">
@@ -25,7 +28,7 @@ function SignInPage({ logoSymbol }) {
           Continue with Instagram
         </FancySecondaryButton>
         <FancySecondaryButton variant="contained" startIcon={<EmailIcon />} className="mb-2" onClick={handleClick}>Continue with email</FancySecondaryButton>
-        <Typography variant="body2" className="mt-2 text-center"><a href="#" className="secondary-link">Skip this step</a></Typography>
+        <Typography variant="body2" className="mt-2 text-center"><a href="#" onClick={handleSkip} className="secondary-link">Skip this step</a></Typography>
       </div>
     </>;
 }

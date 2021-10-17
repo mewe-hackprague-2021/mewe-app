@@ -12,6 +12,9 @@ function ConnectBankPage({ logoFullbg, connectorArrows }) {
   const handleClick = (e) => {
     history.push("/connect-prefs");
   }
+  const handleSkip = (e) => {
+    history.push("/home");
+  }
 
   return <>
       <div className="page-connectbank vw-100 vh-100 d-flex flex-column p-4 align-items-stretch">
@@ -43,7 +46,7 @@ function ConnectBankPage({ logoFullbg, connectorArrows }) {
             <img src={InstagramSVG} className="manualButtonIcon" />
             Continue with Instagram
           </FancySecondaryButton>
-          <Typography variant="body2" className="mt-3 mb-2"><a href="#" className="secondary-link">Skip this step</a></Typography>
+          <Typography variant="body2" className="mt-3 mb-2"><a href="#" onClick={handleSkip} className="secondary-link">Skip this step</a></Typography>
           <Typography variant="body2">You can connect to your bank later in the settings.</Typography>
         </div>
       </div>

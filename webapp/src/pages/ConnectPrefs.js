@@ -12,7 +12,7 @@ import './ConnectPrefs.css';
 function ConnectPrefsPage({ logoFullbg, connectorArrows }) {
   const history = useHistory();
   const handleClick = (e) => {
-    history.push("/connect-prefs");
+    history.push("/home");
   }
 
   const [country, setCountry] = React.useState('');

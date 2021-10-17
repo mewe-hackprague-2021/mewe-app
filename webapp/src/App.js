@@ -5,6 +5,7 @@ import ConnectSocialPage from './pages/ConnectSocialPage';
 import ConnectPrefsPage from './pages/ConnectPrefs';
 import SplashPage from './pages/SplashPage';
 import SignInPage from './pages/SignInPage';
+import HomePage from './pages/HomePage';
 import connectorArrows from './connector-arrows.svg';
 import logo from './logo.svg';
 import logoFullbg from './logo-fullbg.svg';
@@ -26,6 +27,9 @@ const App = () => {
         </Route>
         <Route path='/sign-in/'>
           <SignInPage logoSymbol={logoSymbol} />
+        </Route>
+        <Route path='/home/'>
+          <HomePage />
         </Route>
         <Route>
           <SplashPage logo={logo} />
